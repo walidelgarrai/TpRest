@@ -17,7 +17,7 @@ public class CompteRestJaxRSAPI {
     private CompteRepository compteRepository;
     @Path("/comptes")
     @GET
-    @Produces({MediaType.APPLICATION_JSON})
+    @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
     public List<Compte> compteList(){
         return compteRepository.findAll();
     }
